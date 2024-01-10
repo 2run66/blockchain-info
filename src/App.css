@@ -3,26 +3,46 @@
   text-align: center;
 }
 
-section {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  font-size: 32px;
-  font-weight: bold;
+body.light {
+  background-color: #FFFBF5;
+  color: black;
 }
 
-.nav {
+body.dark {
+  background-color: #50577A;
+  color: white;
+}
+
+section {
+  display: flex; /* Changed to flex for better control */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height for flexibility */
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px; /* Added padding for spacing */
+}
+
+nav.light, nav.dark {
   display: flex;
   align-items: center;
-  position: -webkit-sticky;
-  top: -5px;
+  position: sticky;
+  top: 0;
   z-index: 2;
   height: 70px;
   min-height: 70px;
-  width: calc(100% - 1.5rem);
-  background-color: #fff;
+  width: 100%;
   padding: 0 1rem;
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+}
+
+nav.light {
+  background-color: #F7EFE5;
+}
+
+nav.dark {
+  background-color: #404258;
+  color: white;
 }
 
 .nav__container {
@@ -43,12 +63,10 @@ section {
   flex: 1;
 }
 
-
 .navbar-logo {
-  width: 50px; /* Set the desired width for the logo */
-  height: auto; /* Maintain aspect ratio */
+  width: 50px;
+  height: auto;
 }
-
 
 .active {
   font-weight: bold;
@@ -69,11 +87,54 @@ li {
 li:hover {
   text-decoration: underline;
 }
-.price{
-  color: #3b3b3c;
-  background: #ffffff;
+
+.price {
   border-radius: 10px;
   position: absolute;
-  right: 100px;
+  right: 20px;
   top: -8px;
+}
+
+/* Media Queries for Tablet */
+@media (max-width: 768px) {
+  section {
+    font-size: 24px;
+  }
+
+  .nav__container__actions {
+    padding-left: 20px;
+  }
+
+  .price {
+    right: 10px;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+  section {
+    font-size: 18px;
+    padding: 20px; /* Increased padding for mobile */
+    display: block; /* Use block display for better stacking */
+  }
+
+  .nav__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__container__actions {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .price {
+    position: static;
+    margin-top: 10px;
+  }
 }

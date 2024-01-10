@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Price.css';
 
 function PriceCard() {
     // State to store BTCUSDT price and symbol

@@ -1,0 +1,39 @@
+.navbar-logo {
+    max-height: 50px; /* Adjust to match your navbar's height */
+    width: auto;
+    margin-right: 20px; /* Optional spacing */
+}
+
+nav {
+    background-color: #f4f4f4;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    box-shadow: 01px 10px 60px -03px rgba(0,0,0,0.3);;
+    align-items: center;
+    border-bottom-width: 0.1vh;
+    border-bottom-style: solid;
+    border-bottom-color: hsla(0, 0%, 24%, 0.58);
+    /* Add other styling for the navbar */
+}
+.navbar-text {
+    color: #000809;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 60px;
+    /* Add other styling for the navbar */
+}
+.navbar-text:hover {
+    color: #000809;
+    background-color: hsla(0, 0%, 24%, 0.58);
+    /* Add other styling for the navbar */
+}
